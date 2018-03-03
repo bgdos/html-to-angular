@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {InfoService} from '../../services/info.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +7,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: []
 })
 export class FooterComponent {
-  year: number = new Date().getFullYear();
-  company: string = "JS Software";
+  constructor ( public _is:InfoService){  }
 }
