@@ -7,6 +7,7 @@ import {app_routing} from './app.routes';
 
 /** Services */
 import  {InfoService} from "./services/info.service";
+import {ProductsService} from "./services/products.service";
 
 /** Components */
 import { AppComponent } from './app.component';
@@ -31,7 +32,10 @@ import { ItemComponent } from './components/item/item.component';
     BrowserModule,
     app_routing
   ],
-  providers: [InfoService],
+  providers: [
+    InfoService,
+    ProductsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

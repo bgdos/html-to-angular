@@ -16,7 +16,6 @@ export class InfoService {
    public load_info(){
     this.http.get("assets/data/info.data.json")
     .subscribe( data =>{
-      console.log(data.json());
       this.info = data.json();
       this.loaded = true;
     })
@@ -24,7 +23,6 @@ export class InfoService {
    public load_team_info(){
     this.http.get("https://web-angular-beeaf.firebaseio.com/team.json")
     .subscribe( data =>{
-      console.log(data.json());
       this.team = data.json();
       this.loaded_about = true;
     })
