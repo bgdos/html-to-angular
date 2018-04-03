@@ -12,7 +12,7 @@ import { ProductsService } from '../../services/products.service';
 export class ItemComponent {
   product:any = undefined;
 
-  constructor(private route:ActivatedRoute, private _ps:ProductsService) { 
+  constructor(private route:ActivatedRoute, public _ps:ProductsService) { 
     route.params.subscribe(params=>{
       _ps.load_product(params.id)
         .subscribe(res=>{

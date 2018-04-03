@@ -12,7 +12,7 @@ import { ProductsService } from '../../services/products.service';
 export class SearchComponent {
   term:string = undefined;
 
-  constructor(private route:ActivatedRoute, private _ps:ProductsService) {
+  constructor(private route:ActivatedRoute, public _ps:ProductsService) {
     route.params.subscribe(params=>{
       this.term = params.term;
       _ps.search_product(this.term);
