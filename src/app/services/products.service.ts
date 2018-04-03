@@ -15,6 +15,11 @@ export class ProductsService {
       .subscribe(res=>{
         this.products = res.json();
         this.loading_products = false;
+        // setTimeout(()=>{
+        //   this.products = res.json();
+        //   this.loading_products = false;
+        // },1500)
+        
       });
   } 
 
