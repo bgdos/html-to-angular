@@ -18,9 +18,7 @@ export class ItemComponent {
         .subscribe(res=>{
           this.product = res.json();
           this.product.id = params.id;
-          console.log(this.product);
         });
-      //console.log(params);
     });
   }
 }
