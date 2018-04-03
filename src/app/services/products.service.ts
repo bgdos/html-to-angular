@@ -9,6 +9,10 @@ export class ProductsService {
   constructor( private http:Http ) { 
     this.load_products();
   }
+  public load_product(id:String){
+    return this.http.get(`https://web-angular-beeaf.firebaseio.com/products/${id}.json`);
+
+  }
   public load_products(){
     this.loading_products = true;
     this.http.get('https://web-angular-beeaf.firebaseio.com/products_idx.json')

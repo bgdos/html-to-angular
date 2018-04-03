@@ -4,13 +4,15 @@ import
  {
     AboutComponent,
     PortafolioComponent,
-    ItemComponent
+    ItemComponent,
+    SearchComponent
 } from './components/index.pages';
 
 const app_routes: Routes = [
     {path: 'home', component: PortafolioComponent},
     {path: 'about', component: AboutComponent},
     {path: 'item/:id', component: ItemComponent},
+    {path: 'search/:terms', component: SearchComponent},
     {path: '**', pathMatch:'full', redirectTo: 'home'}
 ];
 
